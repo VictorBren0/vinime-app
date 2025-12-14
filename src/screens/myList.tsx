@@ -11,6 +11,7 @@ import { RootState, AppDispatch } from '@/store';
 import { useNavigation } from '@react-navigation/native';
 import { fetchFavorites } from '@/store/slices/animeSlice';
 import { Heart, Sparkles } from 'lucide-react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function MyList() {
   const dispatch = useDispatch<AppDispatch>();
@@ -45,7 +46,7 @@ export default function MyList() {
     }
     
     return (
-      <Box style={{ flex: 0.5, padding: 6 }}>
+      <Box style={{ flex: 0.5, padding: 6, alignItems: 'center' }}>
         <AnimeCard
           anime={item}
           onPress={() => {
@@ -57,6 +58,7 @@ export default function MyList() {
   };
 
   const ListHeader = () => (
+    <SafeAreaView>
     <Box style={{ paddingHorizontal: 20, paddingTop: 24, paddingBottom: 24 }}>
       <VStack style={{ gap: 16 }}>
         <HStack className="items-center" style={{ gap: 14 }}>
@@ -108,6 +110,7 @@ export default function MyList() {
         )}
       </VStack>
     </Box>
+    </SafeAreaView>
   );
 
   if (loading && !refreshing) {
