@@ -1,3 +1,102 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	/* Primária roxo vibrante (UI principal - modo light) */
+	--color-primary-50: 250 245 255;
+	--color-primary-100: 243 232 255;
+	--color-primary-200: 233 213 255;
+	--color-primary-300: 216 180 254;
+	--color-primary-400: 192 132 252;
+	--color-primary-500: 147 51 234; /* principal - roxo vibrante */
+	--color-primary-600: 126 34 206;
+	--color-primary-700: 107 33 168;
+	--color-primary-800: 88 28 135;
+	--color-primary-900: 71 22 108;
+	--color-primary-950: 46 16 101;
+
+	/* Secundária rosa/pink para destaques */
+	--color-secondary-50: 253 242 248;
+	--color-secondary-100: 252 231 243;
+	--color-secondary-200: 251 207 232;
+	--color-secondary-300: 249 168 212;
+	--color-secondary-400: 244 114 182;
+	--color-secondary-500: 236 72 153; /* rosa vibrante */
+	--color-secondary-600: 219 39 119;
+	--color-secondary-700: 190 24 93;
+	--color-secondary-800: 157 23 77;
+	--color-secondary-900: 131 24 67;
+	--color-secondary-950: 80 7 36;
+
+	/* Fundo e superficíes (tema claro) */
+	--color-background-0: 255 255 255;   /* page - branco puro */
+	--color-background-50: 250 250 252;  /* subtle */
+	--color-background-100: 241 241 246; /* borders suaves */
+	--color-background-900: 15 23 42;    /* para compatibilidade */
+	--color-background-950: 2 6 23;
+
+	/* Tipografia (tema claro) */
+	--color-typography-0: 15 23 42;   /* principal */
+	--color-typography-50: 30 41 59;  /* títulos */
+	--color-typography-100: 71 85 105; /* texto secundário */
+	--color-typography-200: 100 116 139;
+	--color-typography-300: 148 163 184;
+	--color-typography-400: 148 163 184;
+	--color-typography-500: 148 163 184;
+
+	/* Estados de feedback */
+	--color-error-500: 239 68 68;
+	--color-success-500: 34 197 94;
+	--color-warning-500: 251 146 60;
+	--color-info-500: 6 182 212; /* ciano */
+}
+
+.dark {
+	/* Primária roxo néon no dark - mais vibrante para contraste */
+	--color-primary-50: 46 16 101;
+	--color-primary-100: 71 22 108;
+	--color-primary-200: 88 28 135;
+	--color-primary-300: 107 33 168;
+	--color-primary-400: 126 34 206;
+	--color-primary-500: 168 85 247; /* principal - roxo néon claro */
+	--color-primary-600: 192 132 252;
+	--color-primary-700: 216 180 254;
+	--color-primary-800: 233 213 255;
+	--color-primary-900: 243 232 255;
+	--color-primary-950: 250 245 255;
+
+	/* Secundária rosa néon para destaques no dark */
+	--color-secondary-50: 80 7 36;
+	--color-secondary-100: 131 24 67;
+	--color-secondary-200: 157 23 77;
+	--color-secondary-300: 190 24 93;
+	--color-secondary-400: 219 39 119;
+	--color-secondary-500: 244 114 182; /* rosa néon */
+	--color-secondary-600: 249 168 212;
+	--color-secondary-700: 251 207 232;
+	--color-secondary-800: 252 231 243;
+	--color-secondary-900: 253 242 248;
+	--color-secondary-950: 254 248 252;
+
+	/* Fundo e superfícies (tema escuro) */
+	--color-background-0: 10 10 15;      /* page - quase preto azulado */
+	--color-background-50: 20 20 30;   /* cards */
+	--color-background-100: 30 30 45;  /* bordas */
+	--color-background-900: 10 10 15;
+	--color-background-950: 5 5 10;
+
+	/* Tipografia (tema escuro) */
+	--color-typography-0: 248 250 252;   /* principal */
+	--color-typography-50: 241 245 249;  /* títulos */
+	--color-typography-100: 226 232 240; /* texto secundário */
+	--color-typography-200: 203 213 225;
+	--color-typography-300: 148 163 184;
+	--color-typography-400: 100 116 139;
+	--color-typography-500: 71 85 105;
+}
+
+html, body {
+	background-color: rgb(var(--color-background-0));
+	color: rgb(var(--color-typography-0));
+}
