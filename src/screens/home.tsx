@@ -137,7 +137,7 @@ export default function Home() {
                             }
                             value={searchQuery}
                             onChangeText={setSearchQuery}
-                            className="text-typography-950 dark:text-typography-50 text-sm"
+                            className="text-sm"
                         />
                     </Input>
                 </Box>
